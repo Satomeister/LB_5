@@ -1,0 +1,30 @@
+﻿<Window x:Class="LB_5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LB_5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="720.2" WindowStyle="ThreeDBorderWindow">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50px"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid KeyDown="Down_move" Grid.Row="0" Margin="10">
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock Text="top coord:" FontSize="16"/>
+                <TextBox Margin="10 0 10 0" Width="100" x:Name="SquareTop" />
+                <TextBlock Text="left coord:" FontSize="16"/>
+                <TextBox Margin="10 0 10 0" Width="100" x:Name="SquareLeft" />
+                <TextBlock Text="side length:" FontSize="16"/>
+                <TextBox Margin="10 0 10 0" Width="100" x:Name="SquareSideSize"/>
+                <Button Click="Create_Square">Create Square</Button>
+            </StackPanel>
+        </Grid>
+        <GridSplitter Grid.Row="0" Height="2" Background="#000" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
+        <Canvas Grid.Row="1" KeyDown="Down_move" >
+            <Rectangle x:Name="SquareElem" Height="0" Width="0" Fill="Red" Stroke="Black"/>
+        </Canvas>
+    </Grid>
+</Window>
