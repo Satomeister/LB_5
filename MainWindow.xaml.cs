@@ -48,7 +48,7 @@ namespace LB_5
             if (isSideSizeNum)
                 sideSize = Convert.ToDouble(sideSizeS);
 
-            if (isTopNum && isLeftNum && isSideSizeNum)
+            if (isSideSizeNum)
             {
                 square = new Square(top, left, sideSize, SquareElem);
                 square.Init();
